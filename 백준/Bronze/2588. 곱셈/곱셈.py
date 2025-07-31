@@ -1,0 +1,6 @@
+A = int(input())
+B = int(input())
+print(f"{A * (B % 10)}")
+print(f"{A * (B % 100 // 10)}")
+print(f"{A * (B // 100)}")
+print(f"{A * B}")
