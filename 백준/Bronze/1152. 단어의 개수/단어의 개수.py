@@ -1,12 +1,10 @@
-S = input()
+S = input().strip()
 word = 0
 
-for i in range(len(S)):
-    if S[i] == " ":
-        word += 1
-if S[0] != " ":
+if S != "":
+    for i in range(len(S)):
+        if S[i] == " ":
+            word += 1
     word += 1
-if S[-1] == " ":
-    word -= 1
 
-print(f"{word}")
+print(word)
