@@ -1,21 +1,15 @@
 import sys
 input = sys.stdin.readline
 
-S = input()
-q = int(input())
+S = input().rstrip()
+q = int(input().rstrip())
 
-pre = {ch: [0]*(len(S)+1) for ch in set(S)}
-
+pre = [[0] * 26]
 for i, c in enumerate(S):
-    for ch in pre:
-        pre[ch][i+1] = pre[ch][i] + (1 if c == ch else 0)
+    pre.append(pre[len(pre) - 1][:])
+    pre[i+1][ord(c)-97] += 1
 
 for _ in range(q):
-    q1, q2, q3 = input().split()
-    l = int(q2)
-    r = int(q3)
-    if q1 in pre:
-        result = pre[q1][r+1] - pre[q1][l]
-    else:
-        result = 0
+    q1, q2, q3 = input().rstrip().split()
+    result = pre[int(q3) + 1][ord(q1) - 97] - pre[int(q2)][ord(q1) - 97]
     print(result)
