@@ -1,0 +1,5 @@
+A = chr(35)
+print(f"{A}  {A} {A}{A}{A}{A} {A}{A}{A}{A} {A}  {A}")
+print(f"{A}{A}{A}{A} {A}  {A} {A}  {A} {A} {A}")
+print(f"{A}{A}{A}{A} {A}  {A} {A}  {A} {A} {A}")
+print(f"{A}  {A} {A}{A}{A}{A} {A}{A}{A}{A} {A}  {A}")
