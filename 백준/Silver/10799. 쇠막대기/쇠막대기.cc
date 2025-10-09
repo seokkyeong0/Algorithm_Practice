@@ -16,7 +16,6 @@ int main() {
 
     stack<char> st;
     for (auto c : s) {
-        v[0] = 0;
         if (st.empty()) {
             st.push(c);
             floor++;
